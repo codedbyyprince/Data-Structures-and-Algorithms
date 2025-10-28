@@ -1,3 +1,5 @@
+import time
+
 def selction_sort(arr):
     n = len(arr)
     for i in range(n-1):
@@ -53,7 +55,36 @@ def merge(left , right):
 
 
 arr = [ 1,4, 6, 2 ,2, 5, 7, 8 ,3 ]
-selction_sort(arr)
-bubble_sort(arr)
-insertion_sort(arr)
-print(merge_sort(arr))
+
+# Time calculation for each sort
+print("\nTime taken by each sorting algorithm:")
+print("-" * 40)
+
+# Selection Sort
+start_time = time.time()
+arr_copy = arr.copy()
+print("Selection Sort:", end=" ")
+selction_sort(arr_copy)
+print(f"Time: {time.time() - start_time:.6f} seconds")
+
+# Bubble Sort
+start_time = time.time()
+arr_copy = arr.copy()
+print("Bubble Sort:", end=" ")
+bubble_sort(arr_copy)
+print(f"Time: {time.time() - start_time:.6f} seconds")
+
+# Insertion Sort
+start_time = time.time()
+arr_copy = arr.copy()
+print("Insertion Sort:", end=" ")
+insertion_sort(arr_copy)
+print(f"Time: {time.time() - start_time:.6f} seconds")
+
+# Merge Sort
+start_time = time.time()
+arr_copy = arr.copy()
+print("Merge Sort:", end=" ")
+sorted_arr = merge_sort(arr_copy)
+print(*sorted_arr)
+print(f"Time: {time.time() - start_time:.6f} seconds")
