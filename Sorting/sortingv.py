@@ -53,6 +53,32 @@ def merge(left , right):
     merged.extend(right[j:])
     return merged
 
+def quick_sort(arr):
+    if len(arr) <= 1:  
+        return arr
+
+    n = len(arr) 
+    right = []
+    left = []
+    equal = []
+    pt = n // 2
+    pivot = arr[pt]
+
+    for i in arr:
+        if i < pivot:
+            left.append(i)
+        elif i > pivot:
+            right.append(i)
+        else:
+            equal.append(i)
+
+    return quick_sort(left) + equal + quick_sort(right)
+
+# Test
+arr = [1,5,5,874,54,798,4,7,8]    
+print(quick_sort(arr))
+
+
 
 arr = [ 1,4, 6, 2 ,2, 5, 7, 8 ,3 ]
 
