@@ -54,7 +54,7 @@ def merge(left , right):
     return merged
 
 def quick_sort(arr):
-    if len(arr) <= 1:  
+    if len(arr) <= 1:
         return arr
 
     n = len(arr) 
