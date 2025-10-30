@@ -14,5 +14,6 @@ def second_largest(arr):
             return
     print("No second largest element")
 
-arr = [8,8,8,8,8,8,8,8,7,6,5]
+arr = [35,78,8,8,8,8,8,8,8,8,7,6,5]
 second_largest(arr)
+ 
