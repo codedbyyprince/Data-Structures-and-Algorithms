@@ -12,4 +12,4 @@ def longest_subarray(arr, k):
             max_length = max(max_length , length)
         if curr not in prefix:
              prefix[curr] = i
-    return max_length
+    return max_length   

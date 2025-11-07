@@ -18,3 +18,6 @@ arr = [1,6,3,3,78,6,1]
 k = 7
 
 print(two_sum(arr, k))
+print(two_sum_v2(arr, k))
+
+
