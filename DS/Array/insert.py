@@ -19,5 +19,5 @@ print("After insertion at given position:", arr)
 # insertion at the end
 arr = [1,2,3,4,0]
 ele = 5
-arr[len(arr) - 1] - ele
+arr[len(arr) - 1] = ele
 print("After insertion at the end:", arr)
