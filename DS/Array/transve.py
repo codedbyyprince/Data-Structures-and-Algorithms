@@ -25,7 +25,7 @@ for i in range(len(arr)):
 arr = [10, 20, 30, 40, 50]
 
 #2. Modifying elements using traversal
-    arr[i] += 5
+arr[i] += 5
 
 # Print modified array
 print("Modified array:", end=' ')

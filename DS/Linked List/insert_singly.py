@@ -1,0 +1,46 @@
+class node:
+    def __init__(self,data):
+        self.data = data 
+        self.next = None
+
+
+# --------inset-at-start-----------------
+def insert_at_start( head, data):
+    newnode = node(data)
+    newnode.next = head
+
+    return newnode
+
+
+
+# --------inset-at-end-----------------
+def insert_at_end(head, data):
+    newnode = node(data)
+
+    if head is None:
+        return newnode
+    
+    temp = head
+    while temp.next is None:
+        temp = temp.next
+
+    temp.next = newnode
+    return head
+
+# --------inset-at-specific-point-----------------
+
+    
+    
+
+head = node(10)
+head.next = node(20)
+head.next.next = node(30)
+
+head = insert_at_start(head, 5)
+
+
+temp = head
+while temp:
+    print(temp.data, end=" -> ")
+    temp = temp.next
+print("None")
