@@ -1,6 +1,6 @@
 class node:
     def __init__(self,data):
-        self.data = data 
+        self.data = data
         self.next = None
 
 # --------delete-at-beginning------------
@@ -48,7 +48,7 @@ def delete_at_specific(head, pos):
         return head 
     
     delete_node = temp.next 
-    temp.next = delete_node.next 
+    temp.next = delete_node.next
     delete_node = None
 
     return head
