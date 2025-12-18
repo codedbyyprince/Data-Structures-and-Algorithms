@@ -20,3 +20,16 @@ class MyQueue:
         res = self.arr[self.front]
         self.front = (self.front + 1 )% self.capacity
         return res 
+
+    def get_rear(self):
+        if self.size == 0:
+            print('Queue is empty')
+            return -1 
+        rear = (self.front + self.size -1 ) % self.capacity
+        return self.arr[rear]
+    
+    def get_front(self):
+        if self.size == 0:
+            print('Queue is empty ')
+            return -1
+        return self.arr[self.front]
