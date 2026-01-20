@@ -13,7 +13,7 @@ def dict_graph(V , edges):
         adj[v].append(u)
     
     return adj
-# BFS 
+# ----------BFS---------- 
 
 # Connected 
 def Connected_bfs(adj, src):
@@ -65,6 +65,35 @@ def  bfs_disconnected(adj):
     return res
 
 
+# ----------DFS---------- 
+
+# Main func
+def dfs_recursive(adj, node, visited , res):
+    visited.add(node)
+    res.append(node)
+
+    for neighbour in adj[node]:
+        if neighbour not in visited:
+            dfs_recursive(adj, neighbour, visited, res)
+    
+# Connected
+def dfs_connected(adj, src):
+    visited = set()
+    res = []
+
+    dfs_recursive(adj, src, visited, res)
+    return res 
+
+# Disconnected
+def dfs_disconnected(adj):
+    visited = set()
+    res = []
+
+    for node in adj:
+        if node not in visited:
+            dfs_recursive(adj, node , visited, res)
+    return res 
+
 # Example run
 
 V = 6
@@ -84,3 +113,7 @@ print(f'Graph = {adj}')
 print(f'Connected BFS = {Connected_bfs(adj, 0)}')
 
 print(f'Disconnected BFS = {bfs_disconnected(adj)}')
+
+print(f'Connected BFS = {dfs_connected(adj, 0)}')
+
+print(f'Disconnected BFS = {dfs_disconnected(adj)}')
