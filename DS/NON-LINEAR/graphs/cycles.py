@@ -1,7 +1,7 @@
 from collections import deque
 
-# Building Graph 
-def dict_graph(n , edges):
+# Directed Graph 
+def directed_graph(n , edges):
     graph = {}
 
     for i in range(n):
@@ -12,6 +12,7 @@ def dict_graph(n , edges):
     
     return graph
 
+# Cycle Directed
 def cycle_directed(graph , n):
     indegree = {}
     for i in range(n):
@@ -41,3 +42,42 @@ def cycle_directed(graph , n):
         return False
     else:
         return True
+
+# Undirected Graph
+def undirected_graph(V, edges):
+    graph = {i: [] for i in range(V)}
+
+    for u, v in edges:
+        u.append(v)
+        v.append(u)
+    return graph
+
+# Cycle Undirected
+def cycle_undirected(graph , V):
+    pass
+
+V = 6
+edges = [
+    [0,1],[0,2],[0,4],[0,5],
+    [1,3],[1,5],[1,2],
+    [2,4],[2,5],
+    [3,4],[3,5],
+    [4,3],[4,1],
+    [5,3],[5,4]
+]
+
+V = 6
+edges2 = [
+    [0,1],
+    [1,2],
+    [2,3],
+    [3,4],
+    [4,5]
+]
+
+
+graph = directed_graph(V , edges)
+print(cycle_directed(graph, V))
+
+graph = directed_graph(V , edges2)
+print(cycle_directed(graph, V))
