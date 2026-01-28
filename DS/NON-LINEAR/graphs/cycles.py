@@ -54,7 +54,25 @@ def undirected_graph(V, edges):
 
 # Cycle Undirected
 def cycle_undirected(graph , V):
-    pass
+    visited = V * [False]
+
+    def dfs(node, parent):
+        visited[node] = True
+
+        for neighbour in graph[node]:
+            if not visited[neighbour]:
+                if dfs(neighbour, node):
+                    True
+                elif neighbour != parent:
+                    True
+        return False
+
+    for i in range(V):
+        if not visited[i]:
+            if dfs(i, -1):
+                return True
+    
+    return False
 
 V = 6
 edges = [
