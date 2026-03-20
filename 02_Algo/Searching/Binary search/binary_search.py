@@ -1,4 +1,4 @@
-#  binary search
+# easy
 
 def binary_search(arr, key):
     l = 0

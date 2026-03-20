@@ -1,3 +1,5 @@
+# easy
+
 def search_insert_position(arr, key):
     n = len(arr)
     l = 0 
