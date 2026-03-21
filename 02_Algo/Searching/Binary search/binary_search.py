@@ -19,3 +19,6 @@ def binary_search(arr, key):
 arr = [1,3,5,7,9]
 
 print(binary_search(arr , 7))
+
+#  0   1   2   3   4   5   6   7   8
+# [2,  5,  8, 12, 16, 23, 38, 45, 56]

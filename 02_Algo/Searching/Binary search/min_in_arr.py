@@ -12,3 +12,7 @@ def min_in_arr(arr):
         else:
             right = mid 
     return arr[left]
+
+
+#  0   1   2   3   4   5   6   7   8
+# [23, 38, 45, 56, 2, 5, 8, 12, 16]
