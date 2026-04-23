@@ -12,3 +12,4 @@ def max_profit(prices):
             max_profit = max(max_profit, profit)
 
     return max_profit
+
